@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    {% load static %}
+    {% include 'pieces/head.html' %}
+
+<body>
+
+<div class="page-wrapper">
+    {% include 'pieces/navbar.html' %}
+
+	
+	<!-- Page Title Section -->
+    <section class="page-title-section-two style-two" style="background-image: url('{% static "images/background/6.jpg" %}')">
+
+		<div class="auto-container">
+			<div class="content-boxed">
+				<div class="title">contact</div>
+				<h1>Drop Us A Line</h1>
+			</div>
+		</div>
+	</section>
+	<!-- End Page Title Section -->
+	
+	<!-- Contact Info Section -->
+	<section class="contact-info-section">
+		<div class="auto-container">
+			<h3>Contact us for any further questions, possible <br> projects & business partnerships</h3>
+			<div class="inner-container">
+				<div class="row clearfix">
+					
+					<!-- Info Column -->
+					<div class="info-column col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-column">
+							<div class="upper-box">
+								<h6>Contact Directly</h6>
+								<span class="icon icon-envelope-open"></span>
+							</div>
+							<ul class="info-list">
+								<li><a href="mailto:hello@lawa.com">hello@lawa.com</a></li>
+								<li><a href="tel:+056-83-458-868">(+056) 83-458-868</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Info Column -->
+					<div class="info-column col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-column">
+							<div class="upper-box">
+								<h6>visit our office</h6>
+								<span class="icon icon-location-pin"></span>
+							</div>
+							<ul class="info-list">
+								<li>192 Orchard Street, Ohio, California, <br> 90002, Unite States</li>
+							</ul>
+						</div>
+					</div>
+					
+					<!-- Info Column -->
+					<div class="info-column col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-column">
+							<div class="upper-box">
+								<h6>work with us</h6>
+								<span class="icon icon-briefcase"></span>
+							</div>
+							<ul class="info-list">
+								<li>Send your CV to our email <br> <a href="mailto:career@lawa.com">career@lawa.com</a></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Contact Info Section -->
+	
+	<!-- Map Section -->
+	<section class="map-section">
+		<div class="auto-container">
+			<!-- Map Outer -->
+			<div class="map-outer">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.92861878182!2d32.57429058287916!3d39.9653486095599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d33bd2660151eb%3A0x8afd2a260f310910!2sSincan%20Avukat%20Do%C4%9Fu%20Kaan%20%C3%96ZT%C4%B0MURCULAR!5e0!3m2!1sen!2sus!4v1714301210212!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+	</section>
+	<!-- End Map Section -->
+
+	
+    {% include 'pieces/Consulation.html' %}
+    {% include 'pieces/CTA.html' %}
+    {% include 'pieces/footer.html' %}
+	
+</div>
+<!--End pagewrapper-->
+
+{% include 'pieces/scripts.html' %}
+
+</body>
+</html>

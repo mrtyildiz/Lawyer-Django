@@ -1,0 +1,22 @@
+{% load static %}
+<!-- Main Footer -->
+		<footer class="main-footer">
+			<div class="auto-container">
+				<div class="logo-box">
+					<div class="logo"><a href="index.html"><img src="{% static 'images/logo.png' %}" alt="" /></a></div>
+				</div>
+				<ul class="footer-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/about/">About Us</a></li>
+					<li><a href="/blog/">Blog</a></li>
+					<li><a href="/contact/">Contact</a></li>
+				</ul>
+
+				<ul class="social-box">
+					{% for social in FooterSocialMedya_All %}
+					<li><a href="{{ social.social_url }}" class="{{ social.SocialMedyaIcon }}" target="_blank"></a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</footer>
+		<!-- End Main Footer -->

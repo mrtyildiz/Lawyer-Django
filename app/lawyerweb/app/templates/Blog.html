@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+{% load static %}
+{% include 'pieces/head.html' %}
+
+<body>
+
+<div class="page-wrapper">
+    {% include 'pieces/navbar.html' %}
+
+	
+	<!-- Page Title Section -->
+    <section class="page-title-section-two style-two" style="background-image: url('{% static "images/main-slider/2.jpg" %}')">
+
+		<div class="auto-container">
+			<div class="content-boxed">
+                <div class="inner-box">
+                    <div class="title">featured post</div>
+                    <h1>Analysis Financial 2025</h1>
+                </div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Sidebar Page Container -->
+    <div class="sidebar-page-container">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+				
+				<!-- Content Side -->
+                <div class="content-side col-lg-9 col-md-12 col-sm-12">
+                	<div class="our-blogs">
+						{% for Blog in Blogs %}
+						<!-- News Block Two -->
+						<div class="news-block-two">
+							<div class="inner-box">
+								<div class="image">
+									<a href="{% url 'detail' question_id=Blog.pk %}"><img src="{{ Blog.image.url }}" alt="" /></a>
+								</div>
+								<div class="title">{{ Blog.Category }}</div>
+								<h4><a href="{% url 'detail' question_id=Blog.pk %}">{{ Blog.Headers }}</a></h4>
+								<div class="post-date">{{ Blog.date_posted }}</div>
+							</div>
+						</div>
+						{% endfor %}
+						
+
+
+						
+					</div>
+					
+					<!-- Post Share Options -->
+					<div class="styled-pagination">
+						<ul class="clearfix">
+							<li><a href="#">1</a></li>
+							<li class="active"><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li class="next"><a href="#"><span class="flaticon-next-1"></span> </a></li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<!-- Sidebar Side -->
+                <div class="sidebar-side col-lg-3 col-md-12 col-sm-12">
+                	<aside class="sidebar sticky-top">
+						
+						<!-- Search -->
+                        <div class="sidebar-widget search-box">
+							<div class="sidebar-title">
+								<h3>Search</h3>
+							</div>
+							<form method="post" action="contact.html">
+                                <div class="form-group">
+                                    <input type="search" name="search-field" value="" placeholder="Type & Hit Enter..." required>
+                                    <button type="submit"><span class="icon fa fa-search"></span></button>
+                                </div>
+                            </form>
+						</div>
+						
+						<!-- Categories Widget -->
+						<div class="sidebar-widget categories-widget">
+							<div class="widget-content">
+								<div class="sidebar-title">
+									<h3>Categories</h3>
+								</div>
+								<ul class="service-cat-two">
+									<li class="active"><a href="/blog/">All<span>{{ Total_Blog }}</span></a></li>
+									{% for category, count in category_count.items %}
+										{% if forloop.counter <= 4 %}
+											<li><a href="/blogs/{{ category.headers }}/">{{ category.headers }}<span>{{ count }}</span></a></li>
+										{% endif %}
+									{% endfor %}
+									<!--<li><a href="service-detail.html">Others<span>{{ others_count }}</span></a></li>-->
+								</ul>
+							</div>
+						</div>
+						
+						<!-- Popular Posts -->
+                        <div class="sidebar-widget popular-posts">
+							<div class="sidebar-title">
+                            	<h3>Recent Posts</h3>
+                            </div>
+                            <div class="widget-content">
+								
+								{% for Reverse in Blogs_Reverse %}
+									{% if forloop.counter <= 3 %}
+										<article class="post">
+											<figure class="post-thumb"><a href="/blog_details/{{ Reverse.id }}/"><img src="{{ Reverse.image.url }}" alt=""></a></figure>
+											<div class="text"><a href="/blog_details/{{ Reverse.id }}/">{{ Reverse.Headers }}</a></div>
+										</article>
+									{% endif %}
+								{% endfor %}
+                           
+                            </div>
+						</div>
+						
+					
+					</aside>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	{% include 'pieces/CTA.html' %}
+	
+    {% include 'pieces/footer.html' %}
+	
+</div>
+<!--End pagewrapper-->
+
+{% include 'pieces/scripts.html' %}
+
+</body>
+</html>

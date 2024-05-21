@@ -1,0 +1,18 @@
+{% load static %}
+<!-- CTA Section -->
+		<section class="cta-section" style="background-image: url('{% static "images/background/1.jpg" %}')">
+			<div class="auto-container">
+				<div class="clearfix">
+					<div class="pull-left">
+						<div class="title">No Obligation. Free consultation</div>
+						{% for contact in Banner_All %}
+						<a class="phone" href="tel:+{{ contact.phone_number }}">{{ contact.phone_number }}</a>
+						{% endfor %}
+					</div>
+					<div class="pull-right">
+						<a href="/contact/" class="theme-btn btn-style-two"><span class="txt">Contact Us</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End CTA Section -->

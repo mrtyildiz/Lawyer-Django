@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    {% load static %}
+    {% include 'pieces/head.html' %}
+<body>
+
+<div class="page-wrapper">
+ 	
+    {% include 'pieces/navbar.html' %}
+	
+	<!-- Page Title Section Three -->
+    <section class="page-title-section-three" style="background-image: url('{% static "images/background/5.jpg" %}')">
+		<div class="auto-container">
+			<div class="content-boxed">
+				<h2>{{ blog.Headers }}</h2>
+				<ul class="post-info">
+					<li>{{ blog.date_posted }}</li>
+					<li>{{ blog.Category }}</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- End Page Title Section Three -->
+	
+	<!-- Sidebar Page Container -->
+    <div class="sidebar-page-container style-two">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+				
+				<!-- Content Side -->
+                <div class="content-side col-lg-9 col-md-12 col-sm-12">
+                	<div class="blog-detail">
+						<div class="inner-box">
+							<ul class="post-info">
+								<li><a href="index/">Home</a></li>
+								<li>blog</li>
+							</ul>
+							<!-- RichTextField içeriğini güvenli bir şekilde render etmek -->
+							<div>{{ blog.content | safe }}</div>
+						</div>
+						
+						<!-- Related Projects -->
+						<div class="related-projects">
+							<div class="title-box">
+								<h3>Related Posts</h3>
+							</div>
+							<div class="row clearfix">
+								{% for Relates in Related %}
+								<!-- News Block Three -->
+								<div class="news-block-three col-lg-6 col-md-6 col-sm-12">
+									<div class="block-inner">
+										<div class="image">
+											<a href="{% url 'detail' question_id=Relates.pk %}"><img src="{{ Relates.image.url }}" alt="" /></a>
+										</div>
+										<div class="lower-content">
+											<div class="post-date">{{ Relates.date_posted }}</span></div>
+											<h4><a href="{% url 'detail' question_id=Relates.pk %}">{{ Relates.Headers }}</a></h4>
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!-- Sidebar Side -->
+                <div class="sidebar-side col-lg-3 col-md-12 col-sm-12">
+                	<aside class="sidebar sticky-top">
+						
+						<!-- Search -->
+                        <div class="sidebar-widget search-box">
+							<div class="sidebar-title">
+								<h3>Search</h3>
+							</div>
+							<form method="post" action="contact.html">
+                                <div class="form-group">
+                                    <input type="search" name="search-field" value="" placeholder="Type & Hit Enter..." required>
+                                    <button type="submit"><span class="icon fa fa-search"></span></button>
+                                </div>
+                            </form>
+						</div>
+						
+						<!-- Categories Widget -->
+						<div class="sidebar-widget categories-widget">
+							<div class="widget-content">
+								<div class="sidebar-title">
+									<h3>Categories</h3>
+								</div>
+								<ul class="service-cat-two">
+									<li class="active"><a href="service-detail.html">All<span>{{ Total_Blog }}</span></a></li>
+									{% for category, count in category_count.items %}
+										{% if forloop.counter <= 4 %}
+											<li><a href="#">{{ category.headers }}<span>{{ count }}</span></a></li>
+										{% endif %}
+									{% endfor %}
+									<li><a href="service-detail.html">Others<span>{{ others_count }}</span></a></li>
+								</ul>
+							</div>
+						</div>
+						
+						
+						<!-- Popular Posts -->
+                        <div class="sidebar-widget popular-posts">
+							<div class="sidebar-title">
+                            	<h3>Recent Posts</h3>
+                            </div>
+                            <div class="widget-content">
+								
+								{% for Reverse in Blogs_Reverse %}
+									{% if forloop.counter <= 3 %}
+										<article class="post">
+											<figure class="post-thumb"><a href="{% url 'detail' question_id=Reverse.pk %}"><img src="{{ Reverse.image.url }}" alt=""></a></figure>
+											<div class="text"><a href="{% url 'detail' question_id=Reverse.pk %}">{{ Reverse.Headers }}</a></div>
+										</article>
+									{% endif %}
+								{% endfor %}
+                           
+                            </div>
+						</div>
+						
+
+						
+					</aside>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!-- Lower Section -->
+		<div class="lower-section">
+			<div class="auto-container">
+				<!-- Comment Form -->
+				<div class="comment-form">
+					<div class="group-title">
+						<h3>Leave A Reply</h3>
+						<div class="comment-text">Your email address will not be published</div>
+					</div>
+					<!--Comment Form-->
+					<form method="post" action="blog.html">
+						<div class="row clearfix">
+							<div class="col-md-12 col-sm-12 col-xs-12 form-group">
+								<input type="text" name="username" placeholder="Name *" required>
+							</div>
+
+							<div class="col-md-6 col-sm-12 col-xs-12 form-group">
+								<input type="email" name="email" placeholder="Emaill Address *" required>
+							</div>
+
+							<div class="col-md-6 col-sm-12 col-xs-12 form-group">
+								<input type="text" name="text" placeholder="Subject (Optional)" required>
+							</div>
+
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+								<textarea name="message" placeholder="Message"></textarea>
+							</div>
+
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
+								<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">Post Comment</span></button>
+							</div>
+
+						</div>
+					</form>
+
+				</div>
+				<!--End Comment Form -->
+			</div>
+		</div>
+		<!-- End Lower Section -->
+		
+	</div>
+	
+    {% include 'pieces/CTA.html' %}
+    {% include 'pieces/footer.html' %}
+	
+</div>
+
+	<!--End pagewrapper-->
+	{% include 'pieces/scripts.html' %}
+</body>
+</html>

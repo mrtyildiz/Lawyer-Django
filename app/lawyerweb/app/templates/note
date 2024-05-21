@@ -1,0 +1,91 @@
+					<!-- Service Block -->
+					<div class="service-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image-layer" style="background-image: url('{% static "images/resource/service-1.jpg" %}')"></div>
+							<div class="icon-box">
+								<span class="icon flaticon-sedan-car-front"></span>
+							</div>
+							<h5><a href="service-detail.html">Car & Motorcycle <br> Accidents</a></h5>
+							<div class="text">Lorem ipsum dolor sitori dolo <br> tur adipiscing elit.Aenean me <br> vel suscipit magna
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block -->
+					<div class="service-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image-layer" style="background-image: url('{% static "images/resource/service-1.jpg" %}')"></div>
+							<div class="icon-box">
+								<span class="icon flaticon-shelter"></span>
+							</div>
+							<h5><a href="service-detail.html">Personal <br> Injury</a></h5>
+							<div class="text">Lorem ipsum dolor sitori dolo <br> tur adipiscing elit.Aenean me <br> vel suscipit magna
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block -->
+					<div class="service-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image-layer" style="background-image: url('{% static "images/resource/service-1.jpg" %}')"></div>
+							<div class="icon-box">
+								<span class="icon flaticon-dollar"></span>
+							</div>
+							<h5><a href="service-detail.html">Family <br> Law</a></h5>
+							<div class="text">Lorem ipsum dolor sitori dolo <br> tur adipiscing elit.Aenean me <br> vel suscipit magna
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block -->
+					<div class="service-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+                            <div class="image-layer" style="background-image: url('{% static "images/resource/service-1.jpg" %}')"></div>
+
+							<div class="icon-box">
+								<span class="icon flaticon-trend"></span>
+							</div>
+							<h5><a href="service-detail.html">Capital <br> Markets</a></h5>
+							<div class="text">Lorem ipsum dolor sitori dolo <br> tur adipiscing elit.Aenean me <br> vel suscipit magna
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block -->
+					<div class="service-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image-layer" style="background-image: url('{% static "images/resource/service-1.jpg" %}')"></div>
+							<div class="icon-box">
+								<span class="icon flaticon-plumber"></span>
+							</div>
+							<h5><a href="service-detail.html">Employment <br> Law</a></h5>
+							<div class="text">Lorem ipsum dolor sitori dolo <br> tur adipiscing elit.Aenean me <br> vel suscipit magna
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block -->
+					<div class="service-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image-layer" style="background-image: url('{% static "images/resource/service-1.jpg" %}')"></div>
+							<div class="icon-box">
+								<span class="icon flaticon-building"></span>
+							</div>
+							<h5><a href="service-detail.html">House & Estate <br> Litigation</a></h5>
+							<div class="text">Lorem ipsum dolor sitori dolo <br> tur adipiscing elit.Aenean me <br> vel suscipit magna
+							</div>
+						</div>
+					</div>
+
+					<!-- Service Block -->
+					<div class="service-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image-layer" style="background-image: url('{% static "images/resource/service-1.jpg" %}')"></div>
+							<div class="icon-box">
+								<span class="icon flaticon-handcuff"></span>
+							</div>
+							<h5><a href="service-detail.html">Criminal <br> Law</a></h5>
+							<div class="text">Lorem ipsum dolor sitori dolo <br> tur adipiscing elit.Aenean me <br> vel suscipit magna
+							</div>
+						</div>
+					</div>

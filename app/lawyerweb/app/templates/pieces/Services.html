@@ -1,0 +1,29 @@
+{% load static %}	
+<!-- Services Section -->
+		<section class="services-section">
+			<div class="auto-container">
+				<!-- Sec Title -->
+				<div class="sec-title centered">
+					<div class="title">pratices area</div>
+					<h2>How we can’ help you</h2>
+				</div>
+				<div class="row clearfix">
+					{% for Service in Service_All %}
+					<!-- Service Block -->
+					<div class="service-block col-lg-3 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="image-layer" style="background-image: url('{{ Service.image.url }}')"></div>
+							<div class="icon-box">
+								<span class="icon {{ Service.Services_Icon }}"></span>
+							</div>
+							<h5><a href="/blogs/{{ Service.headers }}/">{{ Service.headers }}</a></h5>
+							<div class="text">{{ Service.Description }}
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</section>
+		<!-- End Services Section -->
